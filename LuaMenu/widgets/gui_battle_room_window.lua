@@ -3664,6 +3664,7 @@ local function InitializeControls(battleID, oldLobby, topPoportion, setupData)
 		end
 	end
 	local battleRoomConsole = WG.Chobby.Console("Battleroom Chat", MessageListener, true, nil, true)
+	WG.BattleRoomChatInput = battleRoomConsole.ebInputText
 
 	local chatPanel = Control:New {
 		name = 'chatPanel',
@@ -4332,6 +4333,7 @@ local function InitializeControls(battleID, oldLobby, topPoportion, setupData)
 		oldLobby:RemoveListener("OnSetModOptions", OnSetModOptions)
 
 		WG.BattleStatusPanel.RemoveBattleTab()
+		WG.BattleRoomChatInput = nil
 	end
 
 	mainWindow.OnDispose = mainWindow.OnDispose or {}
@@ -4383,6 +4385,9 @@ function BattleRoomWindow.ShowMultiplayerBattleRoom(battleID)
 					mainWindowFunctions = functions
 					if battleWindow then
 						obj:AddChild(battleWindow)
+					end
+					if WG.BattleRoomChatInput then
+						screen0:FocusControl(WG.BattleRoomChatInput)
 					end
 				end
 				BattleRoomWindow.UpdateMinimapstartBoxes()
@@ -4461,6 +4466,10 @@ function BattleRoomWindow.GetSingleplayerControl(setupData)
 				end
 
 				obj:AddChild(battleWindow)
+
+				if WG.BattleRoomChatInput then
+					screen0:FocusControl(WG.BattleRoomChatInput)
+				end
 
 				UpdateArchiveStatus(true)
 

@@ -746,6 +746,9 @@ local function CreateModoptionWindow()
 	}
 	local function CancelFunc()
 		modoptionsSelectionWindow:Dispose()
+		if WG.BattleRoomChatInput then
+			screen0:FocusControl(WG.BattleRoomChatInput)
+		end
 	end
 
 	local buttonAccept, buttonReset
@@ -762,6 +765,9 @@ local function CreateModoptionWindow()
 		end
 		battleLobby:SetModOptions(localModoptions)
 		modoptionsSelectionWindow:Dispose()
+		if WG.BattleRoomChatInput then
+			screen0:FocusControl(WG.BattleRoomChatInput)
+		end
 	end
 
 	local function ResetFunc()

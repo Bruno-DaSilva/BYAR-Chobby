@@ -415,6 +415,9 @@ local function InitializeControls()
 			favMapsFile:write(mapName .. "\n");
 		end
 		io.close(favMapsFile);
+		if WG.BattleRoomChatInput then
+			screen0:FocusControl(WG.BattleRoomChatInput)
+		end
 	end
 
 	local filterTerms
