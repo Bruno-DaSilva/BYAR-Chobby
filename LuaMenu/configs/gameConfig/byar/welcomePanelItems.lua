@@ -19,6 +19,14 @@ local welcomePanelItems = {
     },
 
     {
+        Header = "Unit Stats 2.0 is Live!",
+        Text = "The Website Unit Library just got a massive upgrade! All weapons per unit are now listed with individual stats across all factions including Legion. Fire every weapon directly in the browser with accurate range, speed, duration and firing sounds." .. " \n" .. " \n" .. "New features include DOT tracking, paralyzer PPS, target category indicators, fixed animations, new 3D unit renders, and mobile-optimised performance. Use 1-9 to fire weapons and 0 to pause the scene!" .. " \n" .. " \n",
+        Image = "LuaMenu/images/welcomepanel/unit_stats_2.png",
+        Url = "https://www.beyondallreason.info/units/armada-bots",
+        UrlText = "Browse the Unit Library",
+    },
+
+    {
         Header = "The Lore is here!",
         Text = "Time to dive in, Commanders.  \n" .. " \n" .. "Step Beyond Human Reach, uncover the stories of Armada and Cortex, and navigate the vastness of BAR universe.",
         Image = "LuaMenu/images/welcomepanel/lore.png",
