@@ -19,6 +19,14 @@ local welcomePanelItems = {
     },
 
     {
+        Header = "Nation Wars 2026 – Registration Open",
+        Text = "The 2026 edition of our friendly competition to find out which nation is the best at BAR is coming in hot this May!\nWill Germany defend its title, or will YOU claim it and bolster your flag's pride?".." \n".." \n".."Join the Nation Wars Discord, rally your fellows, and represent your nation!".." \n".." \n".."You have until April 26 to sign up, before battling it out in 4v4 against the other nations on the weekends of May 16/17 and May 23/24.\nFull rules available on the Nation Wars Discord.",
+        Image = "LuaMenu/images/nation_wars.png",
+        Url = "https://discord.gg/qurXWcjmNN",
+        UrlText = "Nation Wars Discord",
+    },
+
+    {
         Header = "Unit Stats 2.0 is Live!",
         Text = "The Website Unit Library just got a massive upgrade! All weapons per unit are now listed with individual stats across all factions including Legion. Fire every weapon directly in the browser with accurate range, speed, duration and firing sounds." .. " \n" .. " \n" .. "New features include DOT tracking, paralyzer PPS, target category indicators, fixed animations, new 3D unit renders, and mobile-optimised performance. Use 1-9 to fire weapons and 0 to pause the scene!" .. " \n" .. " \n",
         Image = "LuaMenu/images/welcomepanel/unit_stats_2.png",
@@ -32,27 +40,6 @@ local welcomePanelItems = {
         Image = "LuaMenu/images/welcomepanel/lore.png",
         Url = "https://www.beyondallreason.info/news/the-lore-is-here",
         UrlText = "Read the Announcement",
-    },
-
-    { -- Please don't delete this, just comment it out, it's getting reused.
-        Header = "Creative Call To Arms - April Fools Edition",
-        Text = "Are you a music producer? Or do you know someone who is and deserves a bit of recognition? " .. " \n" .. " \n" .. "Create a remix or cover of any Beyond All Reason track, or even combine multiple BAR themes into a single piece. The best entries may end up featured in the game, giving aspiring artists a chance to have their music heard by thousands of players!",
-        Image = "LuaMenu/images/welcomepanel/BAR OST.png",
-        Url = "https://discord.com/channels/549281623154229250/697141979892416512/1481301729252347995",
-        UrlText = "Announcement On Discord",
-        Time = "2026-03-29T23:00:00"
-    },
-
-    {
-        Header = "New Map: Argent Strata",
-        Text =  " \n" .. "A frozen island with icey plateaus and multiple pathways to the center. 1v1 SW vs NE." .. " \n" .. " \n" .. "Made by Moose and Beherith.",
-        Image = "LuaMenu/configs/gameConfig/byar/minimapThumbnail/Argent_Strata_1.0.png",
-    },
-
-    {
-        Header = "New Map: Houses of Tripolis",
-        Text =  " \n" .. "Did you build your house out of straw or metal?" .. " \n" .. " \n" .. "Made by RebelNode and TradeMark.",
-        Image = "LuaMenu/configs/gameConfig/byar/minimapThumbnail/Houses_of_Tripolis_1.2.png",
     },
 
     {
