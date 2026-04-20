@@ -24,7 +24,8 @@ local doNotAskAgainValue = "acvi" -- change this for new announcement
 local enableAnnouncement = true -- this is the actual enable/disable switch
 -- The date from whichforth this announcement is meant to be visbile
 -- So that you may make once ahead of time
-local announceDate = {0, 0, 0, 0, 4, 2026} -- second, minute, hour, day, month, year (UTC)
+local announceDate = {0, 0, 0, 20, 4, 2026} -- second, minute, hour, day, month, year (UTC)
+local announceEndDate = {0, 0, 16, 25, 4, 2026} -- stop showing when event starts
 
 -- shoutout to PTAQ for breaking things
 announceDate = {
@@ -35,6 +36,14 @@ announceDate = {
 	math.min(math.max(1, announceDate[5] or 0), 12),
 	math.min(math.max(2024, announceDate[6] or 0), 2077)
 }
+announceEndDate = {
+	math.min(math.max(1, announceEndDate[1] or 0), 60),
+	math.min(math.max(1, announceEndDate[2] or 0), 60),
+	math.min(math.max(1, announceEndDate[3] or 0), 24),
+	math.min(math.max(1, announceEndDate[4] or 0), 28),
+	math.min(math.max(1, announceEndDate[5] or 0), 12),
+	math.min(math.max(2024, announceEndDate[6] or 0), 2077)
+}
 
 local function SuperAnnouncePopup()
 	local Configuration = WG.Chobby.Configuration
@@ -43,8 +52,13 @@ local function SuperAnnouncePopup()
 		return
 	end
 
-	local _, timeIsInTheFuture = Spring.Utilities.GetTimeDifferenceTable(announceDate)
-	if timeIsInTheFuture then
+	local _, startIsInTheFuture = Spring.Utilities.GetTimeDifferenceTable(announceDate)
+	if startIsInTheFuture then
+		return
+	end
+
+	local _, endIsInTheFuture = Spring.Utilities.GetTimeDifferenceTable(announceEndDate)
+	if not endIsInTheFuture then
 		return
 	end
 
